@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+// Flex cepat
+@mixin flex($direction: row, $align: stretch, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  @if $gap != 0 { gap: $gap; }
+}
+
+// Grid dua kolom
+@mixin grid-cols($cols, $gap) {
+  display: grid;
+  grid-template-columns: $cols;
+  gap: $gap;
+}
+
+// Media query mobile
+@mixin mobile {
+  @media (max-width: $bp-mobile) { @content; }
+}
+
+// Cetak seluruh custom property dari satu tema
+@mixin theme-vars($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{$value};
+  }
+}
+
+// Gaya font mono kecil (dipakai chip, label, dsb.)
+@mixin mono($size, $color: null) {
+  font-family: $font-mono;
+  font-size: $size;
+  @if $color { color: $color; }
+}
+
+// Lingkaran
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+// Efek fokus
+@mixin focus-ring {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+// Kotak "pill" kecil (stat-chip, hobbies, dsb.)
+@mixin pill($radius: 999px) {
+  background: var(--surface);
+  border: 1px solid var(--border-c);
+  border-radius: $radius;
+}

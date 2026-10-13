@@ -1,0 +1,58 @@
+@use '../abstracts/mixins' as *;
+
+.timeline {
+  position: relative;
+  padding-left: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--border-c);
+  }
+}
+
+.t-period {
+  @include mono(12px, var(--accent));
+  margin-bottom: 4px;
+}
+
+.t-item {
+  position: relative;
+  margin-bottom: 34px;
+
+  &:last-child { margin-bottom: 0; }
+
+  &::before {
+    @include circle(12px);
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 4px;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+  }
+
+  h3 {
+    margin: 0 0 4px;
+    font-size: 17px;
+  }
+
+  .t-org {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  // spesifisitas (0,1,1) > .t-period (0,1,0), sama seperti CSS asli
+  p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    max-width: 60ch;
+  }
+}

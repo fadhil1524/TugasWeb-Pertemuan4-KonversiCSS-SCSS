@@ -1,0 +1,50 @@
+// ==========================================================
+// VARIABLES — font, ukuran, breakpoint, dan peta tema warna
+// ==========================================================
+
+// Font
+$font-mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+$font-serif: 'Lora', Georgia, serif;
+
+// Ukuran umum
+$radius:     10px;
+$shadow:     0 12px 32px -12px rgba(0, 0, 0, .35);
+$wrap-width: 880px;
+
+// Breakpoint
+$bp-mobile: 760px;
+
+// Warna titik jendela (titlebar)
+$dot-colors: #E06A5F, #E3AC42, #52B8A7;
+
+// Peta tema: kunci = nama custom property (tanpa --)
+$themes: (
+  dark: (
+    bg:         #0F1620,
+    bg-grid:    #121B27,
+    surface:    #161F2B,
+    surface-2:  #1D2733,
+    ink:        #E9E6DC,
+    ink-soft:   #93A0AF,
+    ink-faint:  #5C6878,
+    accent:     #E3AC42,
+    accent-ink: #16110A,
+    accent-2:   #52B8A7,
+    border-c:   #2A3648,
+    danger:     #E06A5F
+  ),
+  light: (
+    bg:         #F6F3EA,
+    bg-grid:    #EFEADB,
+    surface:    #FFFFFF,
+    surface-2:  #F0EBDD,
+    ink:        #1B2430,
+    ink-soft:   #57626F,
+    ink-faint:  #8A93A0,
+    accent:     #B9840F,
+    accent-ink: #FFFBEF,
+    accent-2:   #2F7D6B,
+    border-c:   #E1DACA,
+    danger:     #C1483C
+  )
+);

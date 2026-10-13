@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stat-chip {
+  @include mono(12px, var(--ink-soft));
+  @include pill;
+  padding: 7px 12px;
+
+  b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+
+  span {
+    @include mono(11px, var(--ink-soft));
+    @include pill(6px);
+    background: var(--surface-2);
+    padding: 5px 10px;
+  }
+}

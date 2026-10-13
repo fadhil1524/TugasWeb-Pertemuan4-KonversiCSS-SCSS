@@ -1,0 +1,33 @@
+@use '../abstracts/mixins' as *;
+
+// ---------- Container halaman (tab) ----------
+.page {
+  display: none;
+  padding: 56px 0 72px;
+  animation: fadeIn .45s ease;
+
+  &.is-active { display: block; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  @include mono(12px, var(--accent));
+  letter-spacing: .08em;
+  text-transform: lowercase;
+  margin: 0 0 10px;
+
+  &::before {
+    content: "// ";
+    color: var(--ink-faint);
+  }
+}
+
+h2.section-title {
+  font-size: clamp(24px, 4vw, 32px);
+  margin: 0 0 28px;
+  color: var(--ink);
+}

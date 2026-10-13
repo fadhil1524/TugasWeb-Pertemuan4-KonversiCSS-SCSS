@@ -1,0 +1,17 @@
+@use 'sass:meta';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+:root {
+  --font-mono:  #{meta.inspect($font-mono)};
+  --font-serif: #{meta.inspect($font-serif)};
+  --radius:     #{$radius};
+  --shadow:     #{$shadow};
+}
+
+// Tema dibuat otomatis dari peta $themes
+@each $name, $map in $themes {
+  html[data-theme="#{$name}"] {
+    @include theme-vars($map);
+  }
+}

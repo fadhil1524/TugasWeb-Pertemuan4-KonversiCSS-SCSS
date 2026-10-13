@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-c);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+
+  h3 {
+    font-size: 14px;
+    margin: 0 0 14px;
+    color: var(--accent-2);
+  }
+}
+
+.note-block {
+  margin-top: 44px;
+  border-left: 3px solid var(--accent-2);
+  padding: 4px 0 4px 18px;
+  color: var(--ink-soft);
+
+  strong { color: var(--ink); }
+}

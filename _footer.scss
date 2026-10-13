@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as *;
+
+.statusbar {
+  @include flex(row, center, space-between);
+  @include mono(12px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 8px 20px;
+  z-index: 10;
+
+  .seg {
+    @include flex(row, center, flex-start, 18px);
+
+    // Segmen kanan disembunyikan di mobile
+    &:nth-child(2) {
+      @include mobile { display: none; }
+    }
+  }
+
+  span.dim { opacity: .75; }
+}

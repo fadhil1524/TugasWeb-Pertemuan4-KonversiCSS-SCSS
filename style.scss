@@ -1,0 +1,26 @@
+// ==========================================================
+// style.scss — titik masuk utama (hanya @use / @forward)
+// Muhammad Fadhil — Landing Page
+// ==========================================================
+
+// 1. Base
+@use 'base/root';
+@use 'base/reset';
+
+// 2. Layout
+@use 'layout/header';
+@use 'layout/footer';
+
+// 3. Components
+@use 'components/buttons';
+@use 'components/card';
+@use 'components/chips';
+@use 'components/form';
+@use 'components/timeline';
+@use 'components/contact-list';
+
+// 4. Pages
+@use 'pages/pages';
+@use 'pages/beranda';
+@use 'pages/tentang';
+@use 'pages/kontak';

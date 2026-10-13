@@ -1,0 +1,61 @@
+@use '../abstracts/mixins' as *;
+
+form {
+  .field { margin-bottom: 16px; }
+
+  label {
+    @include mono(12px, var(--ink-soft));
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border-c);
+    border-radius: 7px;
+    padding: 10px 12px;
+    color: var(--ink);
+    font-family: var(--font-serif);
+    font-size: 14px;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+
+  input[type="color"] {
+    width: 52px;
+    height: 34px;
+    border: 1px solid var(--border-c);
+    border-radius: 7px;
+    background: var(--surface-2);
+    padding: 2px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+  }
+
+  input:focus,
+  textarea:focus { border-color: var(--accent); }
+}
+
+.range-row {
+  @include flex(row, center, flex-start, 12px);
+}
+
+.range-val {
+  @include mono(13px, var(--accent));
+  width: 2ch;
+}
+
+.send-note {
+  @include mono(12px, var(--ink-faint));
+  margin-top: 14px;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Fadhil — Landing Page</title>
+<meta name="description" content="Landing page pribadi Muhammad Fadhil, mahasiswa Ilmu Komputer UNIMED." />
+<meta property="og:title" content="Muhammad Fadhil" />
+<meta property="og:description" content="Landing page pribadi mahasiswa UNIMED." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="titlebar">
+      <div class="brand">
+        <span class="dots"><span></span><span></span><span></span></span>
+        fadhil — personal-site
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap/terang">
+        <span class="knob"></span>
+        <span id="themeLabel">mode: gelap</span>
+      </button>
+    </div>
+
+    <nav class="tabbar" role="tablist" aria-label="Navigasi halaman">
+      <a class="tab is-active" href="#page-beranda" role="tab" aria-selected="true" data-page="beranda">
+        <span class="tab-dot"></span><span>beranda</span><span class="tab-ext"></span>
+      </a>
+      <a class="tab" href="#page-tentang" role="tab" aria-selected="false" data-page="tentang">
+        <span class="tab-dot"></span><span>tentang</span><span class="tab-ext"></span>
+      </a>
+      <a class="tab" href="#page-pendidikan" role="tab" aria-selected="false" data-page="pendidikan">
+        <span class="tab-dot"></span><span>pendidikan</span><span class="tab-ext"></span>
+      </a>
+      <a class="tab" href="#page-kontak" role="tab" aria-selected="false" data-page="kontak">
+        <span class="tab-dot"></span><span>kontak</span><span class="tab-ext"></span>
+      </a>
+    </nav>
+
+    <div class="breadcrumb">~/fadhil/<span class="cur" id="breadcrumbPage">beranda</span></div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===== BERANDA ===== -->
+    <section class="page is-active" id="page-beranda">
+      <div class="hero">
+        <div>
+          <p class="hero-kicker"><span id="greeting">halo, saya Fadhil</span></p>
+          <h1>Muhammad Fadhil<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="hero-tagline">Mahasiswa Ilmu Komputer yang sedang belajar membangun sesuatu dari baris kode, satu commit pada satu waktu.</p>
+          <div class="stat-row">
+            <span class="stat-chip"><b>Semester 3</b> · UNIMED</span>
+            <span class="stat-chip">Ilmu Komputer</span>
+            <span class="stat-chip">Medan, Sumatera Utara</span>
+          </div>
+          <div class="go-links">
+            <button class="btn primary" type="button" data-goto="tentang">kenalan lebih jauh →</button>
+            <button class="btn" type="button" data-goto="kontak">hubungi saya</button>
+          </div>
+        </div>
+        <figure class="hero-figure">
+        <img class="hero-photo" src="images/fadhil.jpg" alt="Foto profil Muhammad Fadhil" />
+        <figcaption class="visually-hidden">Foto Profil</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG ===== -->
+    <section class="page" id="page-tentang">
+      <p class="eyebrow">profil</p>
+      <h2 class="section-title">Tentang Saya</h2>
+
+      <div class="about-grid">
+        <article class="card">
+          <h3>Perkenalan Diri</h3>
+          <p>Saya <strong>Muhammad Fadhil</strong>, lahir di Medan pada <time datetime="2007-12-17">17 Desember 2007</time>. Saat ini saya sedang menempuh pendidikan tinggi di program studi <strong>Ilmu Komputer, Universitas Negeri Medan (UNIMED)</strong> dan sudah memasuki <strong>semester 3</strong>. Saya memiliki ketertarikan besar pada pengembangan web, desain antarmuka pengguna, serta eksplorasi teknologi baru.</p>
+          <p>Di luar perkuliahan, saya aktif mengasah skill melalui proyek-proyek pribadi dan belajar mandiri. Saya juga gemar membaca, menonton film, berenang, dan lari untuk menjaga keseimbangan hidup.</p>
+          <div class="hobbies">
+            <span>membaca</span><span>menonton film</span><span>berenang</span><span>lari</span><span>coding</span>
+          </div>
+        </article>
+        <aside class="card" aria-label="Data diri singkat">
+          <h3>Data Diri</h3>
+          <dl class="data-diri">
+            <dt>Domisili</dt><dd>Medan, Sumatera Utara</dd>
+            <dt>Lahir</dt><dd><time datetime="2007-12-17">17 Desember 2007</time></dd>
+            <dt>Bahasa</dt><dd>Indonesia, Inggris, sedikit Cina &amp; Jepang</dd>
+            <dt>Fokus</dt><dd>Pengembangan web &amp; UI</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== PENDIDIKAN ===== -->
+    <section class="page" id="page-pendidikan">
+      <p class="eyebrow">riwayat</p>
+      <h2 class="section-title">Pendidikan</h2>
+
+      <div class="timeline">
+        <article class="t-item">
+          <p class="t-period"><time datetime="2025">2025</time> — Sekarang · Semester 3</p>
+          <h3>S1 Ilmu Komputer</h3>
+          <span class="t-org">Universitas Negeri Medan (UNIMED)</span>
+          <p>Aktif menempuh perkuliahan dengan fokus pada pengembangan perangkat lunak, basis data, dan kecerdasan buatan, sambil terus meningkatkan kompetensi di bidang teknologi informasi.</p>
+        </article>
+        <article class="t-item">
+          <p class="t-period"><time datetime="2022">2022</time> — <time datetime="2025">2025</time></p>
+          <h3>MAN 1 Medan</h3>
+          <span class="t-org">Jurusan IPA</span>
+          <p>Menyelesaikan pendidikan menengah atas dengan predikat baik. Aktif di ekstrakurikuler Deutsch Club dan Pandu Digital, yang membentuk fondasi disiplin dan kerja tim.</p>
+        </article>
+        <article class="t-item">
+          <p class="t-period"><time datetime="2019">2019</time> — <time datetime="2022">2022</time></p>
+          <h3>MTs Al Ulum Medan</h3>
+          <span class="t-org">Pendidikan Menengah Pertama</span>
+          <p>Mulai mengenal dunia sains dan teknologi di sini, sekaligus titik awal ketertarikan pada pemrograman dan logika komputasi.</p>
+        </article>
+      </div>
+
+      <aside class="note-block" aria-label="Minat dan pengembangan diri">
+        <strong>Minat &amp; Pengembangan Diri</strong> — Selain perkuliahan formal, saya terus memperdalam ilmu lewat kursus online, membaca dokumentasi teknis, dan mengerjakan proyek web mandiri. Bercita-cita menjadi <em>full-stack developer</em> yang mampu membangun solusi digital yang bermanfaat bagi masyarakat.
+      </aside>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section class="page" id="page-kontak">
+      <p class="eyebrow">sambungkan</p>
+      <h2 class="section-title">Hubungi Saya</h2>
+
+      <div class="contact-grid">
+        <article class="card">
+          <h3>Kirim Pesan</h3>
+          <form id="contactForm">
+            <div class="field">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="contoh@email.com" required />
+            </div>
+            <div class="field">
+              <label for="tanggal">Tanggal Lahir</label>
+              <input type="date" id="tanggal" name="tanggal" />
+            </div>
+            <div class="field">
+              <label for="warna">Warna Favorit</label>
+              <input type="color" id="warna" name="warna" value="#e3ac42" />
+            </div>
+            <div class="field">
+              <label for="range">Tingkat Kepuasan (0–10)</label>
+              <div class="range-row">
+                <input type="range" id="range" name="kepuasan" min="0" max="10" value="8" />
+                <span class="range-val" id="rangeVal">8</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" placeholder="Tulis pesan..." required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Kirim Pesan</button>
+            <p class="send-note" id="sendNote">// akan membuka aplikasi email kamu</p>
+          </form>
+        </article>
+
+        <aside class="card" aria-label="Kontak lain">
+          <h3>Kontak Lain</h3>
+          <ul class="contact-list">
+            <li><span class="k">email</span> <a href="mailto:m.fadhil11881@gmail.com">m.fadhil11881@gmail.com</a></li>
+            <li><span class="k">telepon</span> 081265537794</li>
+            <li><span class="k">github</span> <a href="https://github.com/fadhil1524" target="_blank" rel="noopener">github.com/fadhil1524</a></li>
+            <li><span class="k">instagram</span> @hikaru.1385</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="statusbar">
+    <div class="seg">
+      <span id="statusPage">beranda</span>
+      <span class="dim">UTF-8</span>
+    </div>
+    <div class="seg">
+      <span class="dim">&copy; <time datetime="2026">2026</time> Muhammad Fadhil · diperbarui <time datetime="2026-08-28">28 Agu 2026</time></span>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

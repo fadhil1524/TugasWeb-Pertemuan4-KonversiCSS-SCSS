@@ -1,0 +1,7 @@
+@use '../abstracts/mixins' as *;
+
+.about-grid {
+  @include grid-cols(1.3fr 1fr, 36px);
+
+  @include mobile { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(var(--bg-grid) 1px, transparent 1px) 0 0 / 100% 42px,
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: 1.65;
+  transition: background-color .35s ease, color .35s ease;
+  padding-bottom: 64px; // ruang untuk status bar
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  &:hover { color: var(--accent); }
+}
+
+:focus-visible { @include focus-ring; }
+
+h1, h2, h3, .mono {
+  font-family: var(--font-mono);
+  letter-spacing: -.01em;
+}
+
+.wrap {
+  max-width: $wrap-width;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
